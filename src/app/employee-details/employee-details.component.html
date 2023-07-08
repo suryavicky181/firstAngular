@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <h3>Employement Management System</h3>
+        </a>
+        </div>
+        <div class="d-flex flex-row-reverse">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Employee</button>>
+        </div>
+        </nav>
+
+
+       
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div style="background-color:lavender;" class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create Employee</h5>
+          <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>-->
+        </div>
+        <div class="modal-body">
+          <!---->
+          <form [formGroup]="employeeform">
+            <div class="form-group">
+              <label for="Employee-ID">Emp_Id</label>
+              <input type="text" class="form-control" formControlName="employee">
+            </div>
+             
+            <div class="form-group">
+                <label for="Name">Emp_Name</label>
+                <input type="text" class="form-control" formControlName="name">
+              </div>
+              <div class="form-group">
+                <label for="Age">Age</label>
+                <input type="number" class="form-control" formControlName="age">
+              </div>
+              <div class="form-group">
+                <label for="Designation">Designation</label>
+                <input type="text" class="form-control" formControlName="designation">
+              </div>
+              <div class="form-group">
+                <label for="Salary">Salary</label>
+                <input type="number" class="form-control" formControlName="salary" >
+              </div>
+              <div class="form-group">
+                <label for="Location">Location</label>
+                <input type="text" class="form-control" formControlName="location" >
+              </div>
+              <div class="form-group">
+                <label for="BloodGroup">Blood Group</label>
+                <input type="text" class="form-control" formControlName="bloodgroup" >
+              </div>
+              <div class="form-group">
+                <label for="Code">Code</label>
+                <input type="text" class="form-control" formControlName="code" >
+              </div>
+              
+          </form> 
+         </div>
+        <div style="background-color:lavender;"class="modal-footer">
+          <button (click)="createemployee(this.employeeform.value)" type="button" class="btn btn-primary" data-dismiss="modal">submit</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-3">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr >
+          <th scope="col">Emp_Id</th>
+          <th scope="col">Emp_Name</th>
+          <th scope="col">Age</th>
+          
+          <th scope="col">Designation</th>
+          <th scope="col">Salary</th>
+          <th scope="col">Location</th>
+          <th scope="col">BloodGroup</th>
+          <th scope="col">Code</th>
+          <th scope [colSpan]="2">
+            Action</th>
+          
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{item.employee}}</td>
+          <td>{{item.name}}</td> 
+          <td>{{item.age}}</td>
+          <td>{{item.designation}}</td>
+          <td>{{item.salary}}</td>
+          <td>{{item.location}}</td>
+          <td>{{item.bloodgroup}}</td>
+          <td>{{item.code}}</td>
+          
+          <td><button routerLink = "/update/{{item.id}}" class="btn btn-warning">Edit</button>&nbsp;
+          <button (click) = "deleteemployee (item.id)" class="btn btn-danger">Delete</button></td>
+        </tr> 
+        
+       
+      </tbody>
+    </table>
+
+
+  </div>

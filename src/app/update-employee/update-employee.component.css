@@ -1,0 +1,14 @@
+h5{
+text-align: center;
+
+}
+.card{
+    top: 50%;
+    left:100%;
+    width: 435px;
+    padding: 31px 31px;
+    transform:translate(-50%,-50% );
+}
+.footer{
+    padding-top: 5%;
+}
