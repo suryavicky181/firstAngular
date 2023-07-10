@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "employee": "surya",
+      "name": "vicky",
+      "age": 23,
+      "designation": "software developer",
+      "salary": 35000,
+      "location": "chennai",
+      "bloodgroup": "0+",
+      "code": "5757",
+      "id": 1
+    },
+    {
+      "employee": "venkat",
+      "name": "raju",
+      "age": 20,
+      "designation": "software developer",
+      "salary": 40000,
+      "location": "banglore",
+      "bloodgroup": "B+",
+      "code": "8545",
+      "id": 2
+    }
+  ]
+}

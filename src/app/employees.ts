@@ -1,11 +1,10 @@
 export interface datamodel{
 id:number;
-employee:string;
-name:string;
+emp_code:string;
+empName:string;
 age:number;
 designation:string;
 salary:number;
 location:string;
-bloodgroup:string;
-code:string;
+bloodGroup:string;
 }
