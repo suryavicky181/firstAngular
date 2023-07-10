@@ -23,14 +23,14 @@ export class EmployeeDetailsComponent implements OnInit{
     
     
     this.employeeform = this.fb.group({
-       employee:['',Validators.required],
-       name:['',Validators.required],
+       emp_code:['',Validators.required],
+       empName:['',Validators.required],
        age:['',Validators.required],
        designation:['',Validators.required],
        salary:['',Validators.required],
        location:['',Validators.required],
-       bloodgroup:['',Validators.required],
-       code:['',Validators.required]
+       bloodGroup:['',Validators.required],
+      
 
   })
   this.getemployee();

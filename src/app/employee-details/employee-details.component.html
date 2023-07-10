@@ -23,13 +23,13 @@
           <!---->
           <form [formGroup]="employeeform">
             <div class="form-group">
-              <label for="Employee-ID">Emp_Id</label>
-              <input type="text" class="form-control" formControlName="employee">
+              <label for="Emp_Code">Emp_Code</label>
+              <input type="text" class="form-control" formControlName="emp_code">
             </div>
              
             <div class="form-group">
-                <label for="Name">Emp_Name</label>
-                <input type="text" class="form-control" formControlName="name">
+                <label for="Emp_Name">Emp_Name</label>
+                <input type="text" class="form-control" formControlName="empName">
               </div>
               <div class="form-group">
                 <label for="Age">Age</label>
@@ -49,11 +49,7 @@
               </div>
               <div class="form-group">
                 <label for="BloodGroup">Blood Group</label>
-                <input type="text" class="form-control" formControlName="bloodgroup" >
-              </div>
-              <div class="form-group">
-                <label for="Code">Code</label>
-                <input type="text" class="form-control" formControlName="code" >
+                <input type="text" class="form-control" formControlName="bloodGroup" >
               </div>
               
           </form> 
@@ -71,7 +67,7 @@
     <table class="table table-bordered">
       <thead>
         <tr >
-          <th scope="col">Emp_Id</th>
+          <th scope="col">Emp_Code</th>
           <th scope="col">Emp_Name</th>
           <th scope="col">Age</th>
           
@@ -79,7 +75,7 @@
           <th scope="col">Salary</th>
           <th scope="col">Location</th>
           <th scope="col">BloodGroup</th>
-          <th scope="col">Code</th>
+          
           <th scope [colSpan]="2">
             Action</th>
           
@@ -88,14 +84,14 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of data">
-          <td>{{item.employee}}</td>
-          <td>{{item.name}}</td> 
+          <td>{{item.emp_code}}</td>
+          <td>{{item.empName}}</td> 
           <td>{{item.age}}</td>
           <td>{{item.designation}}</td>
           <td>{{item.salary}}</td>
           <td>{{item.location}}</td>
-          <td>{{item.bloodgroup}}</td>
-          <td>{{item.code}}</td>
+          <td>{{item.bloodGroup}}</td>
+          
           
           <td><button routerLink = "/update/{{item.id}}" class="btn btn-warning">Edit</button>&nbsp;
           <button (click) = "deleteemployee (item.id)" class="btn btn-danger">Delete</button></td>

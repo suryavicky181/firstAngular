@@ -23,14 +23,14 @@ export class UpdateEmployeeComponent implements OnInit {
   ngOnInit(): void {
 
     this.editEmployeeForm = this.fb.group({
-      employee: ['', Validators.required],
-      name: ['', Validators.required],
+      emp_code: ['', Validators.required],
+      empName: ['', Validators.required],
       age: ['', Validators.required],
       designation: ['', Validators.required],
       salary: ['', Validators.required],
       location: ['', Validators.required],
-      bloodgroup: ['', Validators.required],
-      code: ['', Validators.required]
+      bloodGroup: ['', Validators.required],
+      
     })
 
 
@@ -43,14 +43,14 @@ export class UpdateEmployeeComponent implements OnInit {
     this.api.fetchdata(this.dataid).subscribe((data: datamodel) => {
       console.log(data);
       this.editEmployeeForm.patchValue({
-        employee: data.employee,
-        name: data.name,
+        emp_code: data.emp_code,
+        empName: data.empName,
         age: data.age,
         designation: data.designation,
         salary:data.salary, 
         location: data.location,
-        bloodgroup:data.bloodgroup, 
-        code: data.code,
+        bloodgroup:data.bloodGroup, 
+        
       })   
       
     })
